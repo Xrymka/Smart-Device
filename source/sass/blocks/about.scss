@@ -1,0 +1,140 @@
+.about {
+  width: 100%;
+  margin-bottom: 100px;
+  color: $color-black-pearl;
+
+  @include vp-1023 {
+    margin-bottom: 80px;
+  }
+}
+
+.about__container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.about__year {
+  margin-top: 4px;
+  margin-right: 70px;
+  font-family: $ff-roboto-condensed;
+  font-size: 156px;
+  font-weight: 700;
+  line-height: 180px;
+  color: transparent;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  background: $color-deep-sky-blue url("../img/2022.png") repeat 48%;
+  background-clip: text;
+
+  @include retina {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: $color-deep-sky-blue url("../img/2022@2x.png") repeat 48%;
+      background-clip: text;
+      background-size: contain;
+    }
+  }
+
+  @include vp-1023 {
+    margin-top: 10px;
+    margin-right: 0;
+    line-height: 175px;
+  }
+
+  @include vp-767 {
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  @include vp-374 {
+    display: none;
+  }
+}
+
+.about__title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39.4px;
+  }
+
+  @include vp-374 {
+    margin-bottom: 13px;
+  }
+}
+
+.about__description {
+  transition: all $trans-1000;
+
+  &--hidden {
+    height: 0;
+    overflow: hidden;
+  }
+
+  &--hidden.no-js {
+    height: auto;
+  }
+
+  & p {
+    margin-top: 0;
+    margin-bottom: 23px;
+    line-height: 21.5px;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 18.8px;
+    }
+
+    @include vp-374 {
+      margin-bottom: 19px;
+    }
+
+    & span {
+      @include vp-374 {
+        display: none;
+      }
+    }
+  }
+}
+
+.about__btn {
+  display: flex;
+  justify-content: center;
+  min-width: 180px;
+  margin-top: 20px;
+  padding: 12.5px 20px;
+  text-align: center;
+  font-family: $ff-roboto-condensed;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: $color-deep-sky-blue;
+  border: 1px solid $color-deep-sky-blue;
+  border-radius: 3px;
+  transition: color $trans-default, background-color $trans-default, text $trans-default;
+
+  @include hover-focus {
+    color: $color-alice-blue;
+    background-color: $color-deep-sky-blue;
+  }
+
+  @include vp-1023 {
+    margin-top: -5px;
+  }
+
+  @include vp-374 {
+    min-width: 160px;
+    padding: 8.5px 15px;
+  }
+
+  &.no-js {
+    display: none;
+  }
+}

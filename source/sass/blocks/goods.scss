@@ -1,0 +1,245 @@
+.goods {
+  width: 100%;
+  padding: 66px 0 140px;
+  background-color: $color-black-pearl;
+
+  @include vp-1023 {
+    padding-top: 57px;
+    padding-bottom: 75px;
+  }
+
+  @include vp-374 {
+    padding-top: 47px;
+    padding-bottom: 86px;
+  }
+}
+
+.goods__title {
+  margin-top: 0;
+  margin-bottom: 54px;
+  font-family: $ff-roboto-condensed;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 50.6px;
+
+  @include vp-1023 {
+    margin-bottom: 38px;
+  }
+
+  @include vp-374 {
+    margin-bottom: 28px;
+    font-size: 28px;
+    line-height: 39.4px;
+  }
+}
+
+.goods__title-text {
+  &--mobile {
+    display: none;
+
+    @include vp-374 {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    @include vp-374 {
+      display: none;
+    }
+  }
+}
+
+.goods__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 85px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1279 {
+    gap: 30px;
+  }
+
+  @include vp-1023 {
+    grid-template-columns: 100%;
+  }
+}
+
+.goods__item {
+  min-height: 650px;
+
+  @include vp-1023 {
+    min-height: 250px;
+  }
+
+  &--production {
+    background: $color-black-pearl url("../img/goods/production-desktop.jpg") no-repeat;
+    background-size: cover;
+
+    @include retina {
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background: $color-black-pearl url("../img/goods/production-desktop@2x.jpg") no-repeat;
+        background-size: cover;
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/goods/production-tablet.jpg");
+
+      @include retina {
+        background-image: url("../img/goods/production-tablet@2x.jpg");
+      }
+    }
+
+    @include vp-374 {
+      background-image: url("../img/goods/production-mobile.jpg");
+
+      @include retina {
+        background-image: url("../img/goods/production-mobile@2x.jpg");
+      }
+    }
+  }
+
+  &--mounting {
+    background: $color-black-pearl url("../img/goods/mounting-desktop.jpg") no-repeat;
+    background-size: cover;
+
+    @include retina {
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background: $color-black-pearl url("../img/goods/mounting-desktop@2x.jpg") no-repeat;
+        background-size: cover;
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/goods/mounting-tablet.jpg");
+
+      @include retina {
+        background-image: url("../img/goods/mounting-tablet@2x.jpg");
+      }
+    }
+
+    @include vp-374 {
+      background-image: url("../img/goods/mounting-mobile.jpg");
+
+      @include retina {
+        background-image: url("../img/goods/mounting-mobile@2x.jpg");
+      }
+    }
+  }
+
+  &--accessories {
+    background: $color-black-pearl url("../img/goods/accessories-desktop.jpg") no-repeat;
+    background-size: cover;
+
+    @include retina {
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background: $color-black-pearl url("../img/goods/accessories-desktop@2x.jpg") no-repeat;
+        background-size: cover;
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/goods/accessories-tablet.jpg");
+
+      @include retina {
+        background-image: url("../img/goods/accessories-tablet@2x.jpg");
+      }
+    }
+
+    @include vp-374 {
+      background-image: url("../img/goods/accessories-mobile.jpg");
+
+      @include retina {
+        background-image: url("../img/goods/accessories-mobile@2x.jpg");
+      }
+    }
+  }
+}
+
+.goods__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 48px 140px 0 40px;
+  background: $color-black-pearl-translucent;
+  transition: background-color $trans-default;
+
+  @include hover-focus {
+    background-color: $color-black-pearl-transparent;
+  }
+
+  @include vp-1023 {
+    padding-top: 37px;
+    padding-left: 45px;
+  }
+
+  @include vp-374 {
+    padding: 26px 30px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $color-deep-sky-blue;
+    border-top-left-radius: 3px;
+    transition: background-color $trans-default;
+
+    @include vp-374 {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    display: inline-block;
+    padding: 3px;
+    content: "";
+    right: 27px;
+    bottom: 27px;
+    border: solid $color-default-white;
+    border-width: 0 1px 1px 0;
+    transform: rotate(-45deg);
+    transition: border-color $trans-default;
+
+    @include vp-374 {
+      padding: 2px;
+      right: 17px;
+      bottom: 17px;
+    }
+  }
+
+  & h3 {
+    margin: 0;
+    font-family: $ff-roboto-condensed;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+
+    @include vp-1023 {
+      width: 31%;
+    }
+
+    @include vp-374 {
+      width: 64%;
+      font-size: 18px;
+    }
+  }
+}
+
+.goods__link:hover {
+  &::before {
+    background-color: $color-alice-blue-light;
+  }
+
+  &::after {
+    border-color: $color-deep-sky-blue;
+  }
+}

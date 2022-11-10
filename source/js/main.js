@@ -1,26 +1,36 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {resetDefaultClass} from './utils/remove-nojs';
+import {initAccordion} from './modules/accordion';
+import {initShowText} from './modules/more-btn';
+import {initPhoneMask} from './modules/phone-mask';
+import {resetDefaultForm} from './modules/reset-form';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-
+  const form = document.querySelector('[data-form="form"]');
   // Utils
-  // ---------------------------------
+  resetDefaultClass();
 
   iosVhFix();
 
   // Modules
-  // ---------------------------------
+  initShowText();
+  initPhoneMask();
+  initAccordion();
+  resetDefaultForm(form);
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
   });
-});
 
-// ---------------------------------
+  window.addEventListener('resize', ()=> {
+    initAccordion();
+  });
+});
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
 

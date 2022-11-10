@@ -1,0 +1,15 @@
+.logo__img {
+  &--mobile {
+    display: none;
+
+    @include vp-374 {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    @include vp-374 {
+      display: none;
+    }
+  }
+}
