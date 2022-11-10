@@ -9,8 +9,8 @@ import ghPages from 'gulp-gh-pages';
 
 // Github-pages
 gulp.task('deploy', function() {
-    return gulp.src('./build/**/*')
-        .pipe(ghPages());
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
 });
 
 const server = browserSync.create();
