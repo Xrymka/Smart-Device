@@ -26,10 +26,6 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
   });
-
-  window.addEventListener('resize', ()=> {
-    initAccordion();
-  });
 });
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
