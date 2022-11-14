@@ -1,15 +1,10 @@
-const buttonMore = document.querySelector('[data-company="more"]');
-const textMore = document.querySelector('[data-company="text"]');
+const buttonMore = document.querySelector('[data-company="btn-more"]');
+const textExtended = document.querySelector('[data-company="text"]');
 
 
 const showText = () => {
-  if (textMore.classList.contains('about__description--hidden')) {
-    textMore.classList.remove('about__description--hidden');
-    buttonMore.textContent = 'Свернуть';
-  } else {
-    textMore.classList.add('about__description--hidden');
-    buttonMore.textContent = 'Подробнее';
-  }
+  buttonMore.classList.toggle('about__btn--hidden');
+  textExtended.classList.toggle('about__description--hidden');
 };
 
 const initShowText = () => {

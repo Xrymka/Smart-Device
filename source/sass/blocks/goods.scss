@@ -8,7 +8,7 @@
     padding-bottom: 75px;
   }
 
-  @include vp-374 {
+  @include vp-767 {
     padding-top: 47px;
     padding-bottom: 86px;
   }
@@ -20,16 +20,16 @@
   font-family: $ff-roboto-condensed;
   font-size: 36px;
   font-weight: 400;
-  line-height: 50.6px;
+  line-height: 51px;
 
   @include vp-1023 {
     margin-bottom: 38px;
   }
 
-  @include vp-374 {
+  @include vp-767 {
     margin-bottom: 28px;
     font-size: 28px;
-    line-height: 39.4px;
+    line-height: 39px;
   }
 }
 
@@ -37,13 +37,13 @@
   &--mobile {
     display: none;
 
-    @include vp-374 {
+    @include vp-767 {
       display: block;
     }
   }
 
   &--desktop {
-    @include vp-374 {
+    @include vp-767 {
       display: none;
     }
   }
@@ -74,84 +74,90 @@
   }
 
   &--production {
-    background: $color-black-pearl url("../img/goods/production-desktop.jpg") no-repeat;
+    background: $color-venice-blue url("../img/goods/production-desktop.jpg") no-repeat;
     background-size: cover;
 
     @include retina {
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background: $color-black-pearl url("../img/goods/production-desktop@2x.jpg") no-repeat;
-        background-size: cover;
-      }
+      background: $color-venice-blue url("../img/goods/production-desktop@2x.jpg") no-repeat;
+      background-size: cover;
     }
 
     @include vp-1023 {
+      background-color: $color-midnight-express;
       background-image: url("../img/goods/production-tablet.jpg");
 
       @include retina {
+        background-color: $color-midnight-express;
         background-image: url("../img/goods/production-tablet@2x.jpg");
       }
     }
 
-    @include vp-374 {
+    @include vp-767 {
+      background-color: $color-endeavour;
       background-image: url("../img/goods/production-mobile.jpg");
 
       @include retina {
+        background-color: $color-endeavour;
         background-image: url("../img/goods/production-mobile@2x.jpg");
       }
     }
   }
 
   &--mounting {
-    background: $color-black-pearl url("../img/goods/mounting-desktop.jpg") no-repeat;
+    background: $color-matisse url("../img/goods/mounting-desktop.jpg") no-repeat;
     background-size: cover;
 
     @include retina {
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background: $color-black-pearl url("../img/goods/mounting-desktop@2x.jpg") no-repeat;
-        background-size: cover;
-      }
+      background: $color-matisse url("../img/goods/mounting-desktop@2x.jpg") no-repeat;
+      background-size: cover;
     }
 
     @include vp-1023 {
+      background-color: $color-st-tropaz;
       background-image: url("../img/goods/mounting-tablet.jpg");
 
       @include retina {
+        background-color: $color-st-tropaz;
         background-image: url("../img/goods/mounting-tablet@2x.jpg");
       }
     }
 
-    @include vp-374 {
+    @include vp-767 {
+      background-color: $color-st-tropaz;
       background-image: url("../img/goods/mounting-mobile.jpg");
 
       @include retina {
+        background-color: $color-st-tropaz;
         background-image: url("../img/goods/mounting-mobile@2x.jpg");
       }
     }
   }
 
   &--accessories {
-    background: $color-black-pearl url("../img/goods/accessories-desktop.jpg") no-repeat;
+    background: $color-cyan-blue url("../img/goods/accessories-desktop.jpg") no-repeat;
     background-size: cover;
 
     @include retina {
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background: $color-black-pearl url("../img/goods/accessories-desktop@2x.jpg") no-repeat;
-        background-size: cover;
-      }
+      background: $color-black-pearl url("../img/goods/accessories-desktop@2x.jpg") no-repeat;
+      background-size: cover;
     }
 
     @include vp-1023 {
+      background-color: $color-dark-cerulean;
       background-image: url("../img/goods/accessories-tablet.jpg");
 
       @include retina {
+        background-color: $color-dark-cerulean;
         background-image: url("../img/goods/accessories-tablet@2x.jpg");
       }
     }
 
-    @include vp-374 {
+    @include vp-767 {
+      background-color: $color-port-gore;
       background-image: url("../img/goods/accessories-mobile.jpg");
 
       @include retina {
+        background-color: $color-port-gore;
         background-image: url("../img/goods/accessories-mobile@2x.jpg");
       }
     }
@@ -176,7 +182,7 @@
     padding-left: 45px;
   }
 
-  @include vp-374 {
+  @include vp-767 {
     padding: 26px 30px;
   }
 
@@ -191,7 +197,7 @@
     border-top-left-radius: 3px;
     transition: background-color $trans-default;
 
-    @include vp-374 {
+    @include vp-767 {
       width: 40px;
       height: 40px;
     }
@@ -200,6 +206,7 @@
   &::after {
     position: absolute;
     display: inline-block;
+    vertical-align: middle;
     padding: 3px;
     content: "";
     right: 27px;
@@ -209,28 +216,28 @@
     transform: rotate(-45deg);
     transition: border-color $trans-default;
 
-    @include vp-374 {
+    @include vp-767 {
       padding: 2px;
       right: 17px;
       bottom: 17px;
     }
   }
+}
 
-  & h3 {
-    margin: 0;
-    font-family: $ff-roboto-condensed;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30px;
+.goods__link h3 {
+  margin: 0;
+  font-family: $ff-roboto-condensed;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
 
-    @include vp-1023 {
-      width: 31%;
-    }
+  @include vp-1023 {
+    width: 31%;
+  }
 
-    @include vp-374 {
-      width: 64%;
-      font-size: 18px;
-    }
+  @include vp-767 {
+    width: 64%;
+    font-size: 18px;
   }
 }
 

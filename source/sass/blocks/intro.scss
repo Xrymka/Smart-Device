@@ -3,22 +3,19 @@
   min-height: 880px;
   margin-bottom: 120px;
   padding-top: 305px;
-  background: $banner-to-bottom, $color-black-pearl url("../img/bg-components.jpg") no-repeat;
+  background: $banner-to-bottom, $color-cyan-blue url("../img/bg-components.jpg") no-repeat;
   background-size: cover;
 
 
   @include retina {
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: $banner-to-bottom, $color-black-pearl url("../img/bg-components@2x.jpg") no-repeat;
-      background-size: cover;
-    }
+    background: $banner-to-bottom, $color-cyan-blue url("../img/bg-components@2x.jpg") no-repeat;
+    background-size: cover;
   }
 
   @include vp-1023 {
     margin-bottom: 80px;
     padding-top: 180px;
     min-height: 640px;
-    background-size: cover;
     background-position: left 20% bottom;
   }
 
@@ -26,7 +23,6 @@
     min-height: 560px;
     margin-bottom: 50px;
     padding-top: 150px;
-    background-size: cover;
     background-position: left 25% bottom;
   }
 }
@@ -51,7 +47,7 @@
   font-size: 80px;
   font-weight: 700;
   line-height: 94px;
-  letter-spacing: 5.6px;
+  letter-spacing: 6px;
   text-transform: uppercase;
 
   @include vp-1023 {
@@ -65,7 +61,7 @@
   @include vp-767 {
     margin-bottom: 7px;
     font-size: 36px;
-    line-height: 42.6px;
+    line-height: 43px;
     letter-spacing: 2.52px;
   }
 }
@@ -80,10 +76,10 @@
     margin-bottom: 58px;
   }
 
-  @include vp-374 {
+  @include vp-767 {
     margin-bottom: 44px;
     font-size: 14px;
-    line-height: 21.7px;
+    line-height: 22px;
   }
 }
 
@@ -105,19 +101,16 @@
   }
 
   @include vp-1023 {
-    margin-left: 6.9%;
+    margin-left: 7%;
   }
 
   @include vp-767 {
-    padding: 12px 15px;
-    font-size: 14px;
-    line-height: 16.41px;
-    letter-spacing: 0.7px;
-  }
-
-  @include vp-374 {
     width: 100%;
     margin-left: 0;
+    padding: 12px 15px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.7px;
   }
 }
 

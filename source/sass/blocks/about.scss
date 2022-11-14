@@ -4,7 +4,11 @@
   color: $color-black-pearl;
 
   @include vp-1023 {
-    margin-bottom: 80px;
+    margin-bottom: 82px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 79px;
   }
 }
 
@@ -24,15 +28,13 @@
   color: transparent;
   transform: rotate(180deg);
   writing-mode: vertical-rl;
-  background: $color-deep-sky-blue url("../img/2022.png") repeat 48%;
+  background: $color-dodger-blue url("../img/2022.png") repeat 48%;
   background-clip: text;
 
   @include retina {
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: $color-deep-sky-blue url("../img/2022@2x.png") repeat 48%;
-      background-clip: text;
-      background-size: contain;
-    }
+    background: $color-dodger-blue url("../img/2022@2x.png") repeat 48%;
+    background-clip: text;
+    background-size: contain;
   }
 
   @include vp-1023 {
@@ -42,11 +44,6 @@
   }
 
   @include vp-767 {
-    font-size: 80px;
-    line-height: 80px;
-  }
-
-  @include vp-374 {
     display: none;
   }
 }
@@ -60,12 +57,9 @@
   line-height: 51px;
 
   @include vp-767 {
-    font-size: 28px;
-    line-height: 39.4px;
-  }
-
-  @include vp-374 {
     margin-bottom: 13px;
+    font-size: 28px;
+    line-height: 39px;
   }
 }
 
@@ -80,26 +74,23 @@
   &--hidden.no-js {
     height: auto;
   }
+}
 
-  & p {
-    margin-top: 0;
-    margin-bottom: 23px;
-    line-height: 21.5px;
+.about__description p {
+  margin-top: 0;
+  margin-bottom: 23px;
+  line-height: 21px;
 
-    @include vp-767 {
-      font-size: 14px;
-      line-height: 18.8px;
-    }
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 19px;
+  }
+}
 
-    @include vp-374 {
-      margin-bottom: 19px;
-    }
-
-    & span {
-      @include vp-374 {
-        display: none;
-      }
-    }
+.about__description p span {
+  @include vp-767 {
+    display: none;
   }
 }
 
@@ -108,7 +99,7 @@
   justify-content: center;
   min-width: 180px;
   margin-top: 20px;
-  padding: 12.5px 20px;
+  padding: 12px 20px;
   text-align: center;
   font-family: $ff-roboto-condensed;
   font-size: 14px;
@@ -126,15 +117,28 @@
   }
 
   @include vp-1023 {
-    margin-top: -5px;
+    margin-top: 0;
   }
 
-  @include vp-374 {
+  @include vp-767 {
     min-width: 160px;
-    padding: 8.5px 15px;
+    margin-top: -5px;
+    padding: 8px 15px;
   }
 
   &.no-js {
     display: none;
   }
+}
+
+.about__btn .about__more {
+  display: none;
+}
+
+.about__btn--hidden .about__more {
+  display: block;
+}
+
+.about__btn--hidden .about__less {
+  display: none;
 }

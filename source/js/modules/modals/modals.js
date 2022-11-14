@@ -25,7 +25,6 @@ export class Modals {
     this._documentKeydownHandler = this._documentKeydownHandler.bind(this);
     this._documentClickHandler = this._documentClickHandler.bind(this);
     this._modalClickHandler = this._modalClickHandler.bind(this);
-    this._modalSubmitHandler = this._modalSubmitHandler.bind(this);
 
     this._init();
   }
@@ -106,24 +105,13 @@ export class Modals {
     this.close(target.closest('[data-modal]').dataset.modal);
   }
 
-  _modalSubmitHandler(evt) {
-    const formModal = document.querySelector('[data-modal="form"]');
-
-    if (formModal) {
-      evt.preventDefault();
-      this.close(document.querySelector('.modal.is-active').dataset.modal);
-    }
-  }
-
   _addListeners(modal) {
     modal.addEventListener('click', this._modalClickHandler);
-    modal.addEventListener('submit', this._modalSubmitHandler);
     document.addEventListener('keydown', this._documentKeydownHandler);
   }
 
   _removeListeners(modal) {
     modal.removeEventListener('click', this._modalClickHandler);
-    modal.removeEventListener('submit', this._modalSubmitHandler);
     document.removeEventListener('keydown', this._documentKeydownHandler);
   }
 
@@ -190,7 +178,7 @@ export class Modals {
 
   close(modalName = this._modalName) {
     const modal = document.querySelector(`[data-modal="${modalName}"]`);
-    const formModal = modal.querySelector('[data-modal="form"]');
+    const formModal = modal.querySelector('[data-form="form"]');
     document.removeEventListener('click', this._documentClickHandler);
 
     if (!modal || !modal.classList.contains('is-active')) {
@@ -216,7 +204,10 @@ export class Modals {
     }
 
     setTimeout(() => {
-      formModal.reset();
+      if (modalName !== 'success') {
+        formModal.reset();
+      }
+
       document.addEventListener('click', this._documentClickHandler);
     }, this._eventTimeout);
 

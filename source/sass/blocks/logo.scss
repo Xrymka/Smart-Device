@@ -2,13 +2,13 @@
   &--mobile {
     display: none;
 
-    @include vp-374 {
+    @include vp-767 {
       display: block;
     }
   }
 
   &--desktop {
-    @include vp-374 {
+    @include vp-767 {
       display: none;
     }
   }
