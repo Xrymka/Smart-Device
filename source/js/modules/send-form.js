@@ -15,15 +15,15 @@ function handleFormSubmit(event) {
   fetch('https://echo.htmlacademy.ru/', {
     method: 'POST',
     body: data,
+  }).then(function(response) {
+    if (response.ok) {
+      modals.open('success');
+    }
   });
 
   setTimeout(() => {
     event.target.reset();
   }, 100);
-
-  if (status === 200) {
-    modals.open('success');
-  }
 }
 
 const initForm = () => {
