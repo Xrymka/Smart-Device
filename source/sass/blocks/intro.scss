@@ -31,11 +31,8 @@
   max-width: 78%;
   padding-left: 125px;
 
-  @include vp-1279 {
-    max-width: inherit;
-  }
-
   @include vp-1023 {
+    max-width: inherit;
     padding-left: 0;
   }
 }
