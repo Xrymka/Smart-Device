@@ -1,21 +1,12 @@
 const initPhoneMask = () => {
   let eventCalllback = function (e) {
-
     let el = e.target;
-    let clearVal = el.dataset.phoneClear;
     let pattern = el.dataset.phonePattern;
     let matrixDef = '+7(___) ___-__-__';
     let matrix = pattern ? pattern : matrixDef;
     let i = 0;
     let def = matrix.replace(/\D/g, '');
     let val = e.target.value.replace(/\D/g, '');
-
-    if (clearVal !== 'false' && e.type === 'blur') {
-      if (val.length < matrix.match(/([\_\d])/g).length) {
-        e.target.value = '';
-        return;
-      }
-    }
 
     if (def.length >= val.length) {
       val = def;

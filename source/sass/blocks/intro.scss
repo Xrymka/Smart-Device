@@ -82,6 +82,7 @@
 
 .intro__btn {
   justify-content: center;
+  margin-bottom: 280px;
   padding: 16px 26px;
   font-family: $ff-roboto-condensed;
   font-size: 18px;
@@ -98,11 +99,13 @@
   }
 
   @include vp-1023 {
+    margin-bottom: 205px;
     margin-left: 7%;
   }
 
   @include vp-767 {
     width: 100%;
+    margin-bottom: 190px;
     margin-left: 0;
     padding: 12px 15px;
     font-size: 14px;

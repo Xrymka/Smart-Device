@@ -3,9 +3,9 @@
 }
 
 .footer__container {
-  display: grid;
-  grid-template-columns: 28.3% 1fr 28.3%;
-  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 90px;
   padding-top: 50px;
   padding-bottom: 45px;
 
@@ -15,6 +15,7 @@
   }
 
   @include vp-1023 {
+    display: grid;
     grid-template-columns: 31% 1fr;
     gap: 38px 143px;
     padding-top: 50px;
@@ -44,6 +45,8 @@
 }
 
 .footer__wrapper {
+  min-width: 285px;
+
   @include vp-1023 {
     grid-column: 1 / -1;
     display: flex;
@@ -54,7 +57,7 @@
   @include vp-767 {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 }
 
@@ -81,12 +84,12 @@
 
   @include vp-1023 {
     margin-top: 0;
-    margin-bottom: 22px;
   }
 
   @include vp-767 {
     position: relative;
-    margin-bottom: 0;
+    margin: 0 -25px;
+    padding: 22px 25px;
     cursor: pointer;
 
     &::before,
@@ -100,14 +103,14 @@
 
     &::before {
       top: 45%;
-      right: 0;
+      right: 25px;
       width: 15px;
       height: 1px;
     }
 
     &::after {
-      top: 0;
-      right: 7px;
+      top: 35%;
+      right: 32px;
       width: 1px;
       height: 15px;
     }
@@ -126,8 +129,6 @@
 }
 
 .is-open .footer__title {
-  margin-bottom: 20px;
-
   @include vp-767 {
     &::after {
       transform: rotate(90deg);
@@ -137,12 +138,11 @@
 
 .footer__list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, min-content);
   grid-auto-flow: column;
   margin: 0;
   padding: 0;
-  gap: 7px 30px;
+  gap: 7px 10px;
   list-style-type: none;
 
   @include vp-1023 {
@@ -172,29 +172,35 @@
 
 .is-open .footer__list {
   height: auto;
+  margin-bottom: 10px;
 }
 
 .footer__item {
-  max-width: 220px;
+  max-width: 210px;
 }
 
 .footer__link {
   color: $color-white-transparent;
   transition: opacity $trans-default;
+  user-select: none;
 
   @include hover-focus {
     opacity: 0.5;
   }
 }
 
+.footer__navigation {
+  flex-grow: 1;
+}
+
 .footer__navigation,
 .footer__contacts {
   position: relative;
   padding-top: 0;
-  padding-bottom: 21px;
+  padding-bottom: 22px;
 
   @include vp-767 {
-    padding-top: 21px;
+    padding-bottom: 0;
   }
 
   &::before {
@@ -223,12 +229,13 @@
 }
 
 .footer__address {
+  display: flex;
+  flex-direction: column;
+  max-width: 345px;
   font-style: normal;
   color: $color-white-transparent;
 
   @include vp-767 {
-    display: flex;
-    flex-direction: column;
     height: 0;
     margin-top: 0;
     padding-bottom: 0;
@@ -259,10 +266,12 @@
 }
 
 .footer__address a {
-  display: block;
+  display: inline-block;
   margin-bottom: 7px;
+  vertical-align: middle;
   color: $color-white-transparent;
   transition: opacity $trans-default;
+  user-select: none;
 
   @include vp-1023 {
     margin-bottom: 8px;
@@ -281,4 +290,5 @@
 
 .footer__contacts.is-open .footer__address {
   height: auto;
+  margin-bottom: 10px;
 }

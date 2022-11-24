@@ -7,6 +7,7 @@
   z-index: 100;
 
   @include vp-1023 {
+    position: absolute;
     padding-top: 21px;
     padding-bottom: 25px;
   }
@@ -32,13 +33,15 @@
 .header__list {
   display: flex;
   flex-wrap: wrap;
-  margin: -8px 0 0 10px;
+  gap: 10px 27px;
+  margin: -5px 0 0 10px;
   padding: 0;
   list-style-type: none;
 
   @include vp-1023 {
+    gap: 10px 20px;
     margin-top: 0;
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
   @include vp-374 {
@@ -54,21 +57,14 @@
     width: 40px;
     height: 40px;
   }
-
-  &:not(:last-child) {
-    margin-right: 27px;
-
-    @include vp-1279 {
-      margin-right: 20px;
-    }
-  }
 }
 
 .header__link {
   display: flex;
-  width: 100%;
+  width: fit-content;
   height: 100%;
   transition: opacity $trans-default;
+  user-select: none;
 
   @include vp-1023 {
     align-items: flex-start;

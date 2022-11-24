@@ -172,6 +172,7 @@
   padding: 48px 140px 0 40px;
   background: $color-black-pearl-translucent;
   transition: background-color $trans-default;
+  user-select: none;
 
   @include hover-focus {
     background-color: $color-black-pearl-transparent;

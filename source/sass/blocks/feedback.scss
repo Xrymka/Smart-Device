@@ -20,13 +20,22 @@
   justify-content: flex-end;
   background: url("../img/airplane.png") no-repeat 35px 80px;
 
-  @include retina {
+  @media (min-width: $vp-1024) and (min-resolution: $retina-dppx) {
     background: url("../img/airplane@2x.png") no-repeat 0;
     background-size: 40%;
   }
 
+  @include vp-1279 {
+    background-position: 15px 145px;
+    background-size: 35%;
+  }
+
   @include vp-1023 {
     background: none;
+
+    @include retina {
+      background-image: none;
+    }
   }
 }
 
