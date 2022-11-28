@@ -1692,6 +1692,10 @@ button,
   margin-bottom: 7px;
 }
 
+.footer__item:last-of-type {
+  height: 22px;
+}
+
 .footer__link {
   color: rgba(255, 255, 255, 0.7);
   -webkit-transition: opacity 0.3s ease;
@@ -1803,6 +1807,21 @@ button,
 */
 
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 1.5dppx) {
+  .goods__item--production {
+    background: #2e4a6d url("../img/goods/production-desktop@2x.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .goods__item--mounting {
+    background: #385d84 url("../img/goods/mounting-desktop@2x.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .goods__item--accessories {
+    background: #041827 url("../img/goods/accessories-desktop@2x.jpg") no-repeat;
+    background-size: cover;
+  }
+
   .feedback__container {
     background: url("../img/airplane@2x.png") no-repeat 0;
     background-size: 40%;
@@ -1822,6 +1841,37 @@ button,
   .footer__container {
     padding-top: 25px;
     padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .goods__item--production {
+    background: #081d3f url("../img/goods/production-tablet.jpg") no-repeat;
+  }
+
+  .goods__item--mounting {
+    background: #285180 url("../img/goods/mounting-tablet.jpg") no-repeat;
+  }
+
+  .goods__item--accessories {
+    background: #0a4a83 url("../img/goods/accessories-tablet.jpg") no-repeat;
+  }
+}
+
+@media (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1024px) and (min-resolution: 1.5dppx) {
+  .goods__item--production {
+    background: #081d3f url("../img/goods/production-tablet@2x.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .goods__item--mounting {
+    background: #285180 url("../img/goods/mounting-tablet@2x.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .goods__item--accessories {
+    background: #0a4a83 url("../img/goods/accessories-tablet@2x.jpg") no-repeat;
+    background-size: cover;
   }
 }
 
@@ -1948,21 +1998,6 @@ button,
     min-height: 250px;
   }
 
-  .goods__item--production {
-    background-color: #081d3f;
-    background-image: url("../img/goods/production-tablet.jpg");
-  }
-
-  .goods__item--mounting {
-    background-color: #285180;
-    background-image: url("../img/goods/mounting-tablet.jpg");
-  }
-
-  .goods__item--accessories {
-    background-color: #0a4a83;
-    background-image: url("../img/goods/accessories-tablet.jpg");
-  }
-
   .goods__link {
     padding-top: 37px;
     padding-left: 45px;
@@ -2071,33 +2106,59 @@ button,
     columns: auto;
   }
 
+  .footer__item:last-of-type {
+    height: auto;
+  }
+
+  .footer__item {
+    margin-bottom: 0;
+  }
+
   .footer__address p {
     margin-bottom: 8px;
   }
 
   .footer__address a {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
     margin-bottom: 8px;
   }
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .feedback__container {
+    background-image: none;
+  }
+}
+
+@media (max-width: 768px) {
   .goods__item--production {
-    background-color: #081d3f;
-    background-image: url("../img/goods/production-tablet@2x.jpg");
+    background: #081d3f url("../img/goods/production-mobile.jpg") no-repeat;
   }
 
   .goods__item--mounting {
-    background-color: #285180;
-    background-image: url("../img/goods/mounting-tablet@2x.jpg");
+    background: #285180 url("../img/goods/mounting-mobile.jpg") no-repeat;
   }
 
   .goods__item--accessories {
-    background-color: #0a4a83;
-    background-image: url("../img/goods/accessories-tablet@2x.jpg");
+    background: #3d486b url("../img/goods/accessories-mobile.jpg") no-repeat;
+  }
+}
+
+@media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 768px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 768px) and (min-resolution: 1.5dppx) {
+  .goods__item--production {
+    background: #081d3f url("../img/goods/production-mobile@2x.jpg") no-repeat;
+    background-size: cover;
   }
 
-  .feedback__container {
-    background-image: none;
+  .goods__item--mounting {
+    background: #285180 url("../img/goods/mounting-mobile@2x.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .goods__item--accessories {
+    background: #3d486b url("../img/goods/accessories-mobile@2x.jpg") no-repeat;
+    background-size: cover;
   }
 }
 
@@ -2266,21 +2327,6 @@ button,
 
   .goods__title-text--desktop {
     display: none;
-  }
-
-  .goods__item--production {
-    background-color: #205089;
-    background-image: url("../img/goods/production-mobile.jpg");
-  }
-
-  .goods__item--mounting {
-    background-color: #285180;
-    background-image: url("../img/goods/mounting-mobile.jpg");
-  }
-
-  .goods__item--accessories {
-    background-color: #3d486b;
-    background-image: url("../img/goods/accessories-mobile.jpg");
   }
 
   .goods__link {
@@ -2495,23 +2541,6 @@ button,
   }
 }
 
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-  .goods__item--production {
-    background-color: #205089;
-    background-image: url("../img/goods/production-mobile@2x.jpg");
-  }
-
-  .goods__item--mounting {
-    background-color: #285180;
-    background-image: url("../img/goods/mounting-mobile@2x.jpg");
-  }
-
-  .goods__item--accessories {
-    background-color: #3d486b;
-    background-image: url("../img/goods/accessories-mobile@2x.jpg");
-  }
-}
-
 @media (max-width: 767px) and (max-width: 767px) {
   .footer__list.no-js {
     height: auto;
@@ -2585,20 +2614,5 @@ button,
     -webkit-background-clip: text;
     background-clip: text;
     background-size: contain;
-  }
-
-  .goods__item--production {
-    background: #2e4a6d url("../img/goods/production-desktop@2x.jpg") no-repeat;
-    background-size: cover;
-  }
-
-  .goods__item--mounting {
-    background: #385d84 url("../img/goods/mounting-desktop@2x.jpg") no-repeat;
-    background-size: cover;
-  }
-
-  .goods__item--accessories {
-    background: #041827 url("../img/goods/accessories-desktop@2x.jpg") no-repeat;
-    background-size: cover;
   }
 }

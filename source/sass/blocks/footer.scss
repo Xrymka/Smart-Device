@@ -176,6 +176,18 @@
 
 .footer__item {
   margin-bottom: 7px;
+
+  &:last-of-type {
+    height: 22px;
+
+    @include vp-1023 {
+      height: auto;
+    }
+  }
+
+  @include vp-1023 {
+    margin-bottom: 0;
+  }
 }
 
 .footer__link {
@@ -273,6 +285,7 @@
   user-select: none;
 
   @include vp-1023 {
+    align-self: flex-start;
     margin-bottom: 8px;
   }
 
