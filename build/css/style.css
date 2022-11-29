@@ -1743,6 +1743,8 @@ button,
 }
 
 .footer__address a {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
   display: inline-block;
   margin-bottom: 7px;
   vertical-align: middle;
